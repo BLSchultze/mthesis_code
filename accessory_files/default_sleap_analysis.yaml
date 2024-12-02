@@ -1,0 +1,30 @@
+Animals:
+  angles: []
+  centers: []
+  geometries: []
+  nb_rois: 0
+  positions: []
+  sizes: []
+Chambers:
+  angles: []
+  centers: []
+  geometries: []
+  nb_rois: 0
+  positions: []
+  sizes: []
+Jobs:
+  analyses_profiles: sleapBig.yaml
+  sleap:
+    batch-size: 8
+    max-instances: 16
+    modelname: ../snakemake-workflows/sleap/models/sleapBig
+    no-empty-frames: true
+    tracking.clean_instance_count: {animal_count}
+    tracking.match: hungarian
+    tracking.pre_cull_iou_threshold: '0.8'
+    tracking.pre_cull_to_target: true
+    tracking.robust: '0.95'
+    tracking.similarity: iou
+    tracking.target_instance_count: {animal_count}
+    tracking.track_window: 15
+    tracking.tracker: simple
