@@ -1,4 +1,4 @@
 neuprint_token*
 __pycache__
 .Rhistory
-.code-workspace
+*.code-workspace
